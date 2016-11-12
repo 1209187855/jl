@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>个人简历</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide tab1">
+              <p>Tell You About Me</p>
+            </div>
+            <div class="swiper-slide" name="canvas">
+              <div class="tab2 PesonTell">
+                <span>个人简介</span>
+                <p>李绍帅/男/25/未婚</p>
+                <p>现居住：北京昌平区</p>
+                <p>学历：大专</p>
+                <p>自我评价：善于学习，乐于探索。有较强的团队协作能力。做事认真负责，对前端技术有强烈的征服欲。</p>
+              </div>
+            </div>
+            <div class="swiper-slide" name="chart">
+              <div class="tab2" id="main">
+                <!-- 个人自评 -->
+              </div>
+            </div>
+            <div class="swiper-slide" name="canvas">
+              <div class="tab2 PesonTell">
+                <span>工作经历</span>
+                <p>2013年暑：</p>
+                <p>威海成稿电子厂—计算机监测</p>
+                <p>2014至今：</p>
+                <p>山东魏桥集团—前端工程师</p>
+              </div>
+            </div>
+            <div class="swiper-slide" name="canvas">
+              <div class="tab2 PesonTell">
+                <span>联系方式</span>
+                <p>电话：13717814904</p>
+                <p>QQ：1209187855</p>
+                <p>邮箱：1209187855@qq.com</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS 引用 -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/canvas-particle.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+      // swiper调用
+      var mySwiper = new Swiper('.swiper-container',{
+      onSlideChangeStart: function(swiper,even){
+           // echarts调用
+            var name = $('.swiper-slide-active').attr('name');
+            if (name == 'chart') {
+              $('canvas').remove();
+              chart();
+            }else if(name == 'canvas'){
+              $('canvas').remove();
+              canvas();
+            }else{
+              $('canvas').remove();
+            }
+          }
+      })
+    </script>
+  </body>
+</html>

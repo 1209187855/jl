@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.tab1{
+  background: url('../img/logo.jpg') no-repeat 35% 50%;
+}
+.tab1 p{
+	text-align: center;
+	margin-left: 0.22rem;
+	margin-top: 2rem;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	font-size: .8rem;
+}
+.tab2{
+	margin-top: 3rem;
+	height: 10rem;
+}
+.tab3{
+  background: #20A0FF;
+}
+.tab4{
+  background: #13CE66;
+}
+.tab5{
+  background: #F7BA2A;
+}
+.content2{
+  margin-top: 25%;
+}
+.PesonTell{
+	font-family: '微软雅黑';
+}
+.PesonTell p{
+	font-size: .7rem;
+	margin-left: .3rem;
+	margin-top: .8rem;
+}
+.PesonTell span{
+	margin-left: .3rem;
+	font-weight: bold;
+	font-size: 1rem;
+}
